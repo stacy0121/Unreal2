@@ -9,6 +9,7 @@ ACCTV::ACCTV()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bUseControllerRotationYaw = false;
 }
 
 // Called when the game starts or when spawned
@@ -30,6 +31,7 @@ void ACCTV::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 }
 
 void ACCTV::ChangePerson()

@@ -86,7 +86,7 @@ void APlayerA::Tick(float DeltaTime)
 		door->Destroy();
 	}
 
-	if (interactTwo == 1)
+	/*if (interactTwo == 1)
 	{
 		GetWorld()->GetFirstPlayerController()->UnPossess();
 		if (GetWorld()->GetFirstPlayerController() == nullptr)
@@ -95,7 +95,7 @@ void APlayerA::Tick(float DeltaTime)
 			cctv = Cast<ACCTV>(GetOwner());
 			cctv->GetWorld()->GetFirstPlayerController()->Possess(cctv);
 		}
-	}
+	}*/
 }
 
 // Called to bind functionality to input
